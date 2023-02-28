@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "CMP1903M-A01-2223/1.0.0": {
+        "runtime": {
+          "CMP1903M-A01-2223.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CMP1903M-A01-2223/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
