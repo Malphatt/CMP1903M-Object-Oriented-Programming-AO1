@@ -99,6 +99,5 @@ namespace CMP1903M_A01_2223 {
         // Return the pack as it is without shuffling
             return pack;
         }
-        
     }
 }

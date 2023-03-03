@@ -2,15 +2,40 @@
 
     class Card {
 
-        private int value;
-        private int suit;
-
-        public Card(int value, int suit) {
-            this.value = value;
-            this.suit = suit;
+        public Card(int suit, int value) {
+            Suit = suit;
+            Value = value;
         }
 
-        public int Value { get { return value; } }
-        public int Suit { get { return suit; } }
+        int _value;
+        public int Value {
+            get { return _value; }
+            set {
+                if (value > 0 && value < 14) {
+                    _value = value;
+                } else {
+                    throw new Exception("Invalid Card Value: " + value);
+                }
+            }
+        }
+        int _suit;
+        public int Suit {
+            get { return _suit; }
+            set {
+                if (value > 0 && value < 5) {
+                    _suit = value;
+                } else {
+                    throw new Exception("Invalid Card Suit: " + value);
+                }
+            }
+        }
+
+        public override String ToString() {
+
+            String[] cardSuits = new String[4] { "Spades", "Hearts", "Clubs", "Diamonds" };
+            String[] cardValues = new String[13] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+
+            return cardValues[Value - 1] + " of " + cardSuits[Suit - 1];
+        }
     }
 }

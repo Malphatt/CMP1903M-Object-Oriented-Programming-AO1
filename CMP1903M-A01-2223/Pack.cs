@@ -7,9 +7,10 @@
         public Pack() {
 
         // Creates a new pack of cards with 52 cards in it (4 suits, 13 values)
-            for (int i = 1; i < 5; i++) {
-                for (int j = 1; j < 14; j++) {
-                    pack.Add(new Card(j, i));
+        // Unnecessary to have error checking as the pack is set within the code and not user defined
+            for (int suit = 1; suit < 5; suit++) {
+                for (int value = 1; value < 14; value++) {
+                    pack.Add(new Card(suit, value));
                 }
             }
         }
@@ -58,6 +59,10 @@
             }
 
             return returnCards;
+        }
+
+        public static int GetPackSize() {
+            return pack.Count;
         }
     }
 }
