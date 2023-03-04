@@ -29,7 +29,6 @@
                     return true;
             // No Shuffle
                 case 3:
-                    pack = Shuffle.noShuffle(pack);
                     return true;
             // Invalid Shuffle
                 default:

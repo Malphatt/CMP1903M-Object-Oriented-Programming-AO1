@@ -78,26 +78,5 @@ namespace CMP1903M_A01_2223 {
 
             return shuffledPack;
         }
-
-
-    // =======================
-    // == No Shuffle Method ==
-    // =======================
-    // This method is based on the no shuffle algorithm
-    //
-    // Description of the algorithm:
-    // The no shuffle algorithm is a method of shuffling a deck of cards.
-    // It is a simple method that is easy to perform and can be done in the hands.
-    // The deck is not shuffled at all.
-    //
-    // Steps to reproduce the algorithm:
-    // 1. Do nothing.
-    //
-    // Source: Common Sense
-
-        public static List<Card> noShuffle(List<Card> pack) {
-        // Return the pack as it is without shuffling
-            return pack;
-        }
     }
 }
