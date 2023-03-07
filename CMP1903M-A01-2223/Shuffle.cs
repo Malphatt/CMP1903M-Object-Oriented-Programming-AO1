@@ -61,22 +61,38 @@ namespace CMP1903M_A01_2223 {
     
         public static List<Card> riffleShuffle(List<Card> pack) {
 
-            int deckCount = pack.Count(); // Should be 52 for a full deck
-            int halfDeckCount = deckCount / 2; // Should be 26 for a half deck
+            if (pack.Count() % 2 == 0) { // Check if the pack is an even number of cards
 
-        // Split the deck into two halves
-            List<Card> topHalf = pack.GetRange(0, halfDeckCount);
-            List<Card> bottomHalf = pack.GetRange(halfDeckCount, halfDeckCount);
+                int deckCount = pack.Count(); // Should be 52 for a full deck
+                int halfDeckCount = deckCount / 2; // Should be 26 for a half deck
 
-        // Shuffle the halves together
-        // Decided to start with the bottom half so that the top card isn't the same after the shuffle (as the code shuffles in reverse order to how it is presented in real life)
-            List<Card> shuffledPack = new List<Card>(deckCount);
-            for (int i = 0; i < halfDeckCount; i++) {
-                shuffledPack.Add(bottomHalf[i]);
-                shuffledPack.Add(topHalf[i]);
+            // Split the deck into two halves
+                List<Card> topHalf = pack.GetRange(0, halfDeckCount);
+                List<Card> bottomHalf = pack.GetRange(halfDeckCount, halfDeckCount);
+
+            // Shuffle the halves together
+            // Decided to start with the bottom half so that the top card isn't the same after the shuffle (as the code shuffles in reverse order to how it is presented in real life)
+                List<Card> shuffledPack = new List<Card>(deckCount);
+                for (int i = 0; i < halfDeckCount; i++) {
+                    shuffledPack.Add(bottomHalf[i]);
+                    shuffledPack.Add(topHalf[i]);
+                }
+
+                return shuffledPack;
+
+            } else
+            if (pack.Count() % 2 != 0) { // Check if the pack is an odd number of cards
+                
+            // This also works for a pack with 1 card as the pack will be returned as is during the recursive call
+                List<Card> packMinusLastCard = pack.GetRange(0, pack.Count() - 1); // Remove the last card from the pack
+                List<Card> shuffledPackMinusLastCard = riffleShuffle(packMinusLastCard); // Shuffle the pack minus the last card
+                shuffledPackMinusLastCard.Add(pack[pack.Count() - 1]); // Add the last card to the shuffled pack
+
+                return shuffledPackMinusLastCard;
+
+            } else { // If the pack is empty, return the pack
+                return pack;
             }
-
-            return shuffledPack;
         }
     }
 }

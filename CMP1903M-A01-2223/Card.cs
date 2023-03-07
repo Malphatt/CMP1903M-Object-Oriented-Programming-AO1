@@ -7,6 +7,8 @@
             Value = value;
         }
 
+        // Encapsulation has been used to ensure that the value and suit of a card cannot be changed to an invalid value
+        // Value and Suit are private and can only be accessed through the public get and set methods
         int _value;
         public int Value {
             get { return _value; }
