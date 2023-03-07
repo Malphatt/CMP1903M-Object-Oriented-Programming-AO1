@@ -18,6 +18,10 @@
             Console.WriteLine("Press ENTER to go back at any point or 'Q' to quit the program");
             Console.WriteLine("");
 
+            for (int i = 0; i < 52; i++) {
+                Console.WriteLine(((i/13) + 1) + " " + ((i%13) + 1));
+            }
+
             new Testing();
         }
     }
