@@ -32,6 +32,10 @@
             }
         }
 
+        // Overriding the ToString method to return a string representation of the card
+        // This is used to print the card to the console
+        // I decided to use a string array to store the values and suits of the cards
+        // This is because it is easier to access the values and suits of the cards using the index of the array
         public override String ToString() {
 
             String[] cardSuits = new String[4] { "Spades", "Hearts", "Clubs", "Diamonds" };

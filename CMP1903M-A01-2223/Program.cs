@@ -13,10 +13,10 @@
 
         static void Main(string[] args) {
 
-            Console.WriteLine("Welcome to the Card Pack Program");
+            Console.WriteLine("\nWelcome to the Card Pack Program");
             Console.WriteLine("This program will allow you to shuffle and deal cards from a pack of 52 cards");
             Console.WriteLine("Press ENTER to go back at any point or 'Q' to quit the program");
-            Console.WriteLine("");
+            Console.WriteLine("Additionally, you can type 'P' to print the pack at any point\n");
 
             new Testing();
         }

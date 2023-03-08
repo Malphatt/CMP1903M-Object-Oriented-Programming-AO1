@@ -35,7 +35,7 @@
             }
         }
 
-        public static Card deal() {
+        public static Card deal() { // Deals a single card from the pack
 
         // Gets the first card in the pack
             Card returnCard = pack[0];
@@ -45,7 +45,7 @@
             return returnCard;
         }
         
-        public static List<Card> dealCard(int amount) {
+        public static List<Card> dealCard(int amount) { // Deals the specified amount of cards from the pack
 
         // Creates a new list of cards to return
             List<Card> returnCards = new List<Card>(amount);
@@ -58,8 +58,25 @@
             return returnCards;
         }
 
-        public static int GetPackSize() {
+        public static int GetPackSize() { // Returns the size of the pack
             return pack.Count;
+        }
+
+        public static void PrintPack() { // Prints the pack to the console
+
+            Console.WriteLine("\nPack:");
+
+            foreach (Card card in pack) {
+                Console.WriteLine("  " + card.ToString());
+            }
+        }
+
+        public static void ResetPack() { // Resets the pack to the original 52 cards
+            pack.Clear();
+            for (int i = 0; i < 52; i++) {
+                pack.Add(new Card((i / 13) + 1, (i % 13) + 1));
+            }
+            Console.WriteLine("The pack has been reset\n");
         }
     }
 }

@@ -30,9 +30,9 @@ namespace CMP1903M_A01_2223 {
 
         // Loop through the pack and add a random card to the shuffled pack
             for (int i = pack.Count(); i > 0; i--) {
-                int randomIndex = random.Next(i);       // Get a random index from the pack that hasn't been added to the shuffled pack yet
-                shuffledPack.Add(pack[randomIndex]);    // Add the card at the random index to the shuffled pack
-                pack.RemoveAt(randomIndex);             // Remove the card at the random index from the pack so it can't be added again
+                int randomIndex = random.Next(i);           // Get a random index from the pack that hasn't been added to the shuffled pack yet
+                shuffledPack.Insert(0, pack[randomIndex]);  // Inserts the card at the random index to the start of the shuffled pack
+                pack.RemoveAt(randomIndex);                 // Remove the card at the random index from the pack so it can't be added again
             }
 
             return shuffledPack;
