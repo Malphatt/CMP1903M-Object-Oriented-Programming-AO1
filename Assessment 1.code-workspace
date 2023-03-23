@@ -3,5 +3,27 @@
         {
             "path": "CMP1903M-A01-2223"
         }
-    ]
+    ],
+    "settings": {
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#daa1b7",
+            "activityBar.background": "#daa1b7",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#48722d",
+            "activityBarBadge.foreground": "#e7e7e7",
+            "commandCenter.border": "#15202b99",
+            "sash.hoverBorder": "#daa1b7",
+            "statusBar.background": "#cb7d9b",
+            "statusBar.foreground": "#15202b",
+            "statusBarItem.hoverBackground": "#bc597f",
+            "statusBarItem.remoteBackground": "#cb7d9b",
+            "statusBarItem.remoteForeground": "#15202b",
+            "titleBar.activeBackground": "#cb7d9b",
+            "titleBar.activeForeground": "#15202b",
+            "titleBar.inactiveBackground": "#cb7d9b99",
+            "titleBar.inactiveForeground": "#15202b99"
+        },
+        "peacock.color": "#cb7d9b"
+    }
 }
