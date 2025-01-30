@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CMP1903M_A01_2223
-build_property.ProjectDir = c:\Users\Malphatt\OneDrive\Documents\__Work__\University\Year 1\CMP1903M (Object-Oriented Programming)\Assessment 1\CMP1903M-Object-Oriented-Programming-A01\CMP1903M-A01-2223\
+build_property.ProjectDir = C:\Users\Matth\OneDrive\Documents\__Work__\University\Year 1\CMP1903M (Object-Oriented Programming)\Assessment 1\CMP1903M-Object-Oriented-Programming-A01\CMP1903M-A01-2223\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
